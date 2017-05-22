@@ -8,3 +8,16 @@
 	</ul>
 <% end %>
 
+<form method="post" action="/question/<%=@question.id%>/answer">
+		<input type="text" name="description">
+		<input type="submit" name="Submit">
+</form>
+
+<h2>Answers: </h2>
+<% @answers.each do |a| %>
+	<ul>
+		<li><%= a.description %></li>
+		<li><%= a.created_at %></li>
+	</ul>
+<% end %>
+

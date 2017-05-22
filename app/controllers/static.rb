@@ -1,3 +1,5 @@
+require 'byebug'
+
 get '/' do
 	@questions = Question.all 
 
@@ -6,6 +8,7 @@ end
 
 get '/question/:id' do 
 	@question = Question.find(params[:id])
+	@answers = Answer.all
 
 	erb :"static/question"
 end
@@ -61,3 +64,14 @@ get '/logout' do
 
 	redirect to '/signup'
 end
+
+post '/question/:id/answer' do 
+	x = Answer.new
+	x.description = params[:description]
+	@question = Question.find(params[:id])
+	x.question_id = @question.id
+	x.save
+
+	redirect back
+end
+
