@@ -1,5 +1,13 @@
 <h1>Question Page</h1>
 
+<% if @errors %>
+		<% @errors.full_messages.each do |msg| %>
+		<ul>
+			<li>msg</li>
+		</ul>
+	<% end %>
+<% end %>
+
 <% if @question %>
  	<ul>
 		<li>Question: <%= @question.description %></li>
@@ -17,6 +25,7 @@
 <% @answers.each do |a| %>
 	<ul>
 		<li><%= a.description %></li>
+		<li><%= a.user.username if a.user%></li>
 		<li><%= a.created_at %></li>
 	</ul>
 <% end %>

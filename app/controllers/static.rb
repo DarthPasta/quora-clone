@@ -9,7 +9,6 @@ end
 get '/question/:id' do 
 	@question = Question.find(params[:id])
 	@answers = Answer.all
-
 	erb :"static/question"
 end
 
@@ -65,13 +64,27 @@ get '/logout' do
 	redirect to '/signup'
 end
 
-post '/question/:id/answer' do 
-	x = Answer.new
+post '/question/:id/answer' do 	
+		x = Answer.new
+		x.description = params[:description]
+		@question = Question.find(params[:id])
+		x.question_id = @question.id
+		x.user_id = current_user.id
+		x.save
+		redirect back
+
+end
+
+get '/new' do 
+	erb :"static/question_new"
+end
+
+post '/create' do 
+	x = Question.new
 	x.description = params[:description]
-	@question = Question.find(params[:id])
-	x.question_id = @question.id
+	x.user_id = current_user.id 
 	x.save
 
-	redirect back
+	redirect to '/'
 end
 
