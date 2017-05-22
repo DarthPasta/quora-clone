@@ -1,0 +1,27 @@
+<h1>Sign Up Page</h1>
+
+<p>Have an account? <a href="/signin">Click here</a>
+
+<p>Please enter the details below to signup</p>
+
+<% if @user_errors %>
+<ul>
+	<% if @user_errors.errors.any? %>
+		<% @user_errors.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+	<% end %>
+</ul>
+<% end %>
+
+<form method="post" action="/signup">
+	<h3>Username</h3> 
+	<input type="text" name="username"> <br>
+	<h3>Email</h3> 
+	<input type="text" name="email"> <br>
+	<h3>Password</h3> 
+	<input type="text" name="password"> <br>
+
+	<p><input type="submit" value="Sign up"> </p>
+
+</form>

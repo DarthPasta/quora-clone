@@ -3,6 +3,14 @@
 		<title>Sinatra Framework</title>
 	</head>
 	<body>
+		<% if current_user %>
+		<p><%= "You are now logged in as #{@user.username}" %></p>
+		<% end %>
+
 		<%= yield %>
+
+		<% if logged_in? %>
+			<p><a href="/logout">Log Out</p>
+		<% end %>
 	</body>
 </html>

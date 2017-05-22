@@ -1,0 +1,10 @@
+<h1>Question Page</h1>
+
+<% if @question %>
+ 	<ul>
+		<li>Question: <%= @question.description %></li>
+		<li>Author: <%= @question.user.username %></li>
+		<li>Created at: <%= @question.created_at %></li>
+	</ul>
+<% end %>
+
