@@ -1,0 +1,132 @@
+body {
+	margin: 0;
+	padding: 0;
+    background-color: lightgrey;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+img {
+	height: 75px;
+	width: 100px;
+	display: inline-block;
+	float: left;
+	margin-left: 40px;
+}
+
+ul.nav-bar-ul {
+    list-style: none;
+    background-color: white;
+    position: static;
+    width: 100%;
+    display: inline-flex;
+    height: 70px;
+    border: 1px solid lightslategrey;
+}
+
+li.search {
+	font-size: 25px;
+    border: 1px solid black;
+    height: 30px;
+    margin: 15px 350px 0px 0px;
+    display: inline-block;
+    border-radius: 3px;
+    background-color: papayawhip;
+    padding: 4px 7.5px;
+    float: left;
+}
+
+input.search-input {
+	height: 40px;
+    width: 250px;
+    border-radius: 3px;
+    border-color: grey;
+    margin: 15px 0px 0px 60px;
+    display: block;
+}
+
+li.nav-bar-item {
+	float: right;
+    font-size: 30px;
+    padding: 4px;
+    margin: 14px 20px;
+}
+
+li.nav-bar-item:hover {
+	color: red;
+}
+
+div.center {
+	margin: 0 auto;
+    width: 80%;
+}
+
+div.question-box {
+	height: auto;
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px 0px 20px 10px;
+    border: 1px solid black;
+    margin: 10px 0 10px 0px;
+    font-size: 20px;
+    background: seashell;
+}
+
+li.question {
+	margin: 0px 5px 5px 0px;
+    border-bottom: 0.5px solid grey;
+    font-size: 22px;
+    font-family: Verdana, Geneva, sans-serif;
+    color: teal;
+    word-wrap: break-word;
+}
+
+li.author {
+	display: inline-block;
+    float: left;
+    font-size: 16px;
+}
+
+li.created_at {
+	margin-left: 20px;
+    display: inline-block;
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+a.button {
+	text-decoration: none;
+    font-size: 17.5px;
+    color: forestgreen;
+}
+
+a.button:hover {
+	border-bottom: 1px forestgreen solid;
+}
+
+
+
+
+
+
+
+

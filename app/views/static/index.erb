@@ -1,18 +1,30 @@
+<head>
+	<link rel="stylesheet" type="css/text" href="css/application.css">
+</head>
 
+<body>
 <h1>Index Page</h1>
+
+<form method="post" action="/create">
+<input type="text" name="description" placeholder="What would you like to ask?">
+<input type="Submit" value="Submit">
+
+</form>
 
 <% if @questions %>
 <% @questions.each do |q| %>
+	<div class="question-box">
  	<ul>
-		<li>Question: <%= q.description %></li>
-		<li>Author: <%= q.user.username %></li>
-		<li>Created at: <%= q.created_at %></li>
-		<li><a href="/question/<%=q.id%>"> Reply </a></li>
+		<li class="question"><%= q.description %></li>
+		<li class="author">User: <%= q.user.username %></li>
+		<li class="created_at">Created at: <%= q.created_at %></li>
+		<li><a class="button" href="/question/<%=q.id%>"> Comment </a></li>
 	</ul>
+	</div>
 	<% end %>	
 <% end %>
 
-<p><a href="/new">Create Question</a></p>
 
 
 
+</body>

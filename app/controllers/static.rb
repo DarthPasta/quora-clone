@@ -28,7 +28,7 @@ post '/signup' do
 
 	if x.save 
 		@user = x 
-		redirect to '/signup'
+		redirect to '/'
 	 else 
 	 	@user_errors = x 
 	end
@@ -44,9 +44,9 @@ post '/login' do
 	@user = User.find_by(email: params[:email])
 	if @user
 		session[:id] = @user.id
-		redirect '/signup'
+		redirect '/'
 	else
-		redirect to '/signin'
+		redirect to '/'
 	end
 end
 
